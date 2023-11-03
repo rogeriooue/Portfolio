@@ -1,0 +1,147 @@
+* {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#toggle-theme {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.light #toggle-theme svg.dark-icon {
+    display: none;
+}
+
+.dark #toggle-theme svg.light-icon {
+    display: none;
+}
+
+body {
+    --bg-color: #151516;
+    --text-color: #F0F0F0;
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+}
+
+body.light {
+    --bg-color: #F2F2F2;
+    --text-color: #202020;
+}
+
+#top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 120px 20px 40px 20px; 
+}
+
+#top img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#top h1{
+    font-size: 64px;
+    font-weight: medium;
+    margin: 40px 0px 10px 0px;
+}
+
+#top p{
+    font-size:24px;
+}
+
+.light #top img.dark {
+    display: none;
+}
+
+.dark #top img.light {
+    display: none;
+}
+
+#socialmedia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+#languages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#languages h2{
+    margin-top: 60px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin: 15px;
+}
+
+.language{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 120px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    #top{
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+
+    #top img{
+        width: 180px;
+        height: 180px;
+    }
+
+    #top h1{
+        font-size: 40px;
+    }
+
+    #top p{
+        font-size: 20px;
+    }
+    
+    #socialmedia{
+        gap: 20px;
+    }
+
+    #languages h2{
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .row{
+        flex-direction: column;
+        gap: 10px;
+        margin: 0px;
+    }
+
+    
+}
+
+
+
